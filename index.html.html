@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Literata:ital,wght@0,400;0,600;1,400&amp;family=Sora:wght@400;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#f9efe8", "primary-fixed": "#ffdbcc", "inverse-primary": "#ffb694", "on-secondary-container": "#775300", "on-secondary-fixed-variant": "#5f4100", "note-blue": "#d6e2e9", "surface-dim": "#e1d8d2", "error-container": "#ffdad6", "secondary-container": "#fec96c", "background": "#fff8f4", "primary-fixed-dim": "#ffb694", "tertiary-fixed-dim": "#accbda", "ink-muted": "#5a5248", "tertiary-fixed": "#c8e7f7", "on-primary": "#ffffff", "folder-ochre-shade": "#d9a84e", "on-primary-container": "#fffbff", "on-error-container": "#93000a", "surface-cream": "#f9f7f1", "ink-terracotta": "#c87247", "surface": "#fff8f4", "secondary": "#7d5800", "inverse-surface": "#34302b", "secondary-fixed": "#ffdea9", "on-tertiary-fixed": "#001f29", "note-peach": "eed5a1", "tertiary": "#42606d", "surface-container": "#f6ece5", "tape-paper": "rgba(244, 239, 230, 0.72)", "secondary-fixed-dim": "#f2be62", "surface-tint": "#944922", "surface-container-high": "#f0e6e0", "pin-red": "#b84232", "on-secondary": "#ffffff", "surface-kraft": "#ece5d8", "on-primary-fixed": "#351000", "on-tertiary-container": "#fafdff", "note-yellow": "#fce7be", "folder-ochre": "#dfba73", "surface-cork": "#e8dfcf", "surface-variant": "#eae1da", "on-background": "#1f1b17", "primary-container": "#b05f35", "on-surface-variant": "#54433b", "note-lavender": "#e2d9f3", "outline": "#87736a", "surface-container-low": "#fbf2eb", "ink-espresso": "#201c18", "on-surface": "#1f1b17", "primary": "#914720", "on-tertiary-fixed-variant": "#2d4b57", "surface-container-highest": "#eae1da", "tertiary-container": "#5b7986", "on-error": "#ffffff", "error": "#ba1a1a", "outline-variant": "#dac1b7", "on-secondary-fixed": "#271900", "surface-bright": "#fff8f4", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#76330c", "on-tertiary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "space-md": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin-desktop": "3rem", "space-xs": "0.25rem", "gutter": "1.25rem", "space-sm": "0.5rem", "gutter-desktop": "2rem" }, "fontFamily": { "label-code": ["JetBrains Mono"], "body-sm": ["Sora"], "body-lg": ["Sora"], "headline-xl": ["Sora"], "headline-lg-mobile": ["Sora"], "label-stamp": ["JetBrains Mono"], "headline-md": ["Sora"], "editorial-italic": ["Literata"], "headline-xl-mobile": ["Sora"], "body-md": ["Sora"], "headline-lg": ["Sora"] }, "fontSize": { "label-code": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-stamp": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "editorial-italic": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body
+  class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+  <header class="left-0 right-0 w-full flex justify-center px-4 pointer-events-none"
+    style="position: static; top: 2rem; margin-top: 2rem; z-index: 50;">
+    <div
+      class="pointer-events-auto w-full max-w-[1240px] bg-surface-cream rounded-full px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-[0_8px_32px_rgba(32,28,24,0.08)] border border-surface-cream/80 transition-all duration-500 ease-out">
+      <a class="flex flex-col group pl-1" data-path="desk" href="#">
+        <div class="flex items-center gap-space-xs"><span
+            class="font-headline-md text-[18px] tracking-tight text-ink-espresso uppercase font-bold group-hover:text-primary transition-colors">asif
+            shaik</span></div><span
+          class="font-label-stamp text-[10px] text-ink-muted uppercase tracking-wider pl-space-sm">Full-Stack
+          Developer</span>
+      </a>
+      <nav
+        class="hidden md:flex items-center gap-1.5 p-1 rounded-full bg-surface-kraft/50 border border-surface-cream/60"
+        data-active-classes="bg-surface-cream text-ink-espresso font-semibold shadow-sm"><a aria-current="page"
+          class="px-4 py-1.5 rounded-full font-body-sm text-body-sm transition-all duration-300 ease-out bg-surface-cream text-ink-espresso font-semibold shadow-sm hover:scale-105"
+          data-path="desk" href="#">Desk</a><a
+          class="px-4 py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-ink-espresso hover:bg-surface-cream/80 hover:scale-105 transition-all duration-300 ease-out"
+          data-path="mern-journey" href="#learning-pathway">MERN Journey</a><a
+          class="px-4 py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-ink-espresso hover:bg-surface-cream/80 hover:scale-105 transition-all duration-300 ease-out"
+          data-path="projects" href="#projects-archive">Projects</a><a
+          class="px-4 py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-ink-espresso hover:bg-surface-cream/80 hover:scale-105 transition-all duration-300 ease-out"
+          data-path="skills" href="#desk-canvas">Skills</a><a
+          class="px-4 py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-ink-espresso hover:bg-surface-cream/80 hover:scale-105 transition-all duration-300 ease-out"
+          data-path="about" href="#about">About</a></nav>
+      <div class="flex items-center gap-space-md"><a
+          class="inline-flex items-center justify-center px-5 py-2 rounded-full bg-ink-espresso text-surface-cream font-body-sm text-body-sm font-semibold shadow-[0_4px_16px_rgba(32,28,24,0.18)] hover:bg-primary hover:shadow-[0_6px_20px_rgba(145,71,32,0.3)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 active:translate-y-0 transition-all duration-300 ease-out"
+          data-path="contact" href="#"><span>Get the resume</span></a></div>
+    </div>
+  </header>
+  <main class="w-full bg-surface min-h-[calc(100vh-140px)]" style="padding-top: 0;">
+    <div class="flex flex-col w-full">
+      <!-- MAIN DESK HERO CANVAS -->
+      <section class="w-full max-w-7xl mx-auto px-gutter lg:px-gutter-desktop pt-space-xl pb-space-lg">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+          <!-- Left Column: Primary Identity & Pitch -->
+          <div class="lg:col-span-6 flex flex-col space-y-space-md">
+            <div class="flex items-center gap-space-xs text-ink-muted">
+              <span class="font-label-stamp text-label-stamp tracking-widest uppercase">ASIF SHAIK • CHENNAI</span>
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-ink-terracotta"></span>
+              <span class="font-label-code text-label-code text-ink-muted">MERN_BUILD_v2.5</span>
+            </div>
+            <h1 class="font-headline-xl text-headline-xl text-ink-espresso tracking-tight leading-[1.08]">
+              Full-stack developer, <br>
+              <span
+                class="text-ink-terracotta underline decoration-folder-ochre decoration-4 underline-offset-4">crafting
+                scalable web experiences.</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-ink-muted max-w-[540px]">This is my desk on the internet — the MERN
+              applications I'm building, the APIs I'm wiring, and the systems I'm shipping with architectural rigor and
+              clean code.</p>
+            <p class="font-editorial-italic text-editorial-italic text-primary font-medium">
+              “still learning every layer — writing the code anyway”
+            </p>
+            <!-- "Now" Status Pill Bar -->
+            <div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+              <span
+                class="font-label-stamp text-label-stamp text-ink-espresso uppercase tracking-wider mr-space-xs">Now</span>
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-cream text-ink-espresso text-[12px] font-label-code shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-ink-terracotta animate-pulse"></span>MERN practice builds
+              </span>
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-cream text-ink-espresso text-[12px] font-label-code shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-folder-ochre"></span>
+                Mastering Express &amp; REST APIs
+              </span>
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-cream text-ink-espresso text-[12px] font-label-code shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                Learning in EMC</span>
+            </div>
+            <!-- CTA Action Cluster -->
+            <div class="pt-space-md flex flex-wrap items-center gap-space-md">
+              <a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-ink-espresso text-surface-cream font-body-sm text-body-sm font-semibold shadow-[0_4px_14px_rgba(32,28,24,0.18)] hover:bg-primary-container hover:-translate-y-0.5 active:translate-y-0 transition-all"
+                href="#desk-canvas">
+                <span>Explore my desk canvas</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+              </a>
+              <a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-surface-kraft text-ink-espresso font-body-sm text-body-sm font-medium hover:bg-folder-ochre/30 transition-all shadow-sm"
+                href="https://www.linkedin.com/in/asif-shaik-4142a816b" rel="noopener" target="_blank">
+                <span>LinkedIn profile</span>
+                <span class="material-symbols-outlined text-[16px]">north_east</span>
+              </a>
+            </div>
+          </div>
+          <!-- Right Column: Manila "In The Drawers" & "Where to Find Me" Tags -->
+          <div class="lg:col-span-6 flex flex-col space-y-space-lg">
+            <!-- Section Header -->
+            <div class="flex items-baseline justify-between">
+              <div class="flex items-baseline gap-space-xs">
+                <h2 class="font-headline-md text-headline-md text-ink-espresso tracking-tight">In the drawers</h2>
+                <span class="font-editorial-italic text-editorial-italic text-ink-muted">the rest of the desk</span>
+              </div>
+              <span class="font-label-code text-label-code text-ink-muted">2 folders</span>
+            </div>
+            <!-- 2x2 Manila Folder Desk Drawer Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md"><!-- Folder 1: Learning Journey -->
+              <a class="group relative block bg-[#edd5a1] p-space-md rounded-lg shadow-[0_4px_10px_rgba(32,28,24,0.06)] hover:shadow-[0_8px_18px_rgba(32,28,24,0.12)] hover:-translate-y-1 transition-all"
+                href="#learning-pathway">
+                <div
+                  class="absolute -top-3 left-4 px-3 py-0.5 bg-[#dfba73] text-ink-espresso rounded-t-md font-label-stamp text-label-stamp tracking-wider uppercase">
+                  TAB 01 • ROADMAP
+                </div>
+                <h3 class="font-headline-md text-[18px] text-ink-espresso font-bold mt-space-xs">Learning Journey</h3>
+                <p class="font-body-sm text-body-sm text-ink-muted mt-1 leading-snug">
+                  5 progressive stages from HTML/CSS web foundations to Full-Stack Capstone.
+                </p>
+                <div
+                  class="mt-space-md pt-space-xs border-t border-ink-espresso/10 flex items-center justify-between text-ink-espresso font-label-code text-[11px] font-semibold group-hover:text-primary transition-colors">
+                  <span>View 5-stage pathway</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+                </div>
+              </a>
+              <!-- Folder 2: Repositories -->
+              <a class="group relative block bg-[#edd5a1] p-space-md rounded-lg shadow-[0_4px_10px_rgba(32,28,24,0.06)] hover:shadow-[0_8px_18px_rgba(32,28,24,0.12)] hover:-translate-y-1 transition-all"
+                href="https://github.com/Asifsheik?tab=repositories" rel="noopener" target="_blank">
+                <div
+                  class="absolute -top-3 left-4 px-3 py-0.5 bg-[#dfba73] text-ink-espresso rounded-t-md font-label-stamp text-label-stamp tracking-wider uppercase">
+                  TAB 02 • REPOSITORIES
+                </div>
+                <h3 class="font-headline-md text-[18px] text-ink-espresso font-bold mt-space-xs">Repositories</h3>
+                <p class="font-body-sm text-body-sm text-ink-muted mt-1 leading-snug">
+                  Greenden Tailwind CSS, Notes-Maker, Tourplanner, Guessing Game, and Udemy project repositories on
+                  GitHub.
+                </p>
+                <div
+                  class="mt-space-md pt-space-xs border-t border-ink-espresso/10 flex items-center justify-between text-ink-espresso font-label-code text-[11px] font-semibold group-hover:text-primary transition-colors">
+                  <span>View all repositories ↗</span>
+                  <span class="material-symbols-outlined text-[16px]">north_east</span>
+                </div>
+              </a>
+            </div>
+            <!-- Where to Find Me Luggage Tags -->
+            <div class="flex flex-col space-y-space-xs pt-space-xs">
+              <div class="flex items-baseline gap-space-xs mb-1">
+                <h3 class="font-headline-md text-[16px] text-ink-espresso font-bold">Where to find me</h3>
+                <span class="font-editorial-italic text-editorial-italic text-ink-muted">tags on the desk</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                <!-- Tag 1: LinkedIn -->
+                <a class="flex items-center gap-space-sm p-space-sm bg-[#fce7be] rounded-lg shadow-sm hover:shadow hover:-translate-y-0.5 transition-all"
+                  href="https://www.linkedin.com/in/asif-shaik-4142a816b" rel="noopener" target="_blank">
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#dfba73] flex-shrink-0 flex items-center justify-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-surface-cream"></span>
+                  </span>
+                  <div class="min-w-0">
+                    <span
+                      class="font-label-stamp text-label-stamp uppercase text-ink-muted block tracking-wider">LINKEDIN</span>
+                    <span
+                      class="font-label-code text-label-code text-ink-espresso font-bold truncate block">asif-shaik-4142a816b</span>
+                  </div>
+                </a>
+                <!-- Tag 2: GitHub -->
+                <a class="flex items-center gap-space-sm p-space-sm bg-[#fce7be] rounded-lg shadow-sm hover:shadow hover:-translate-y-0.5 transition-all"
+                  href="https://github.com/Asifsheik?tab=repositories" rel="noopener" target="_blank">
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#dfba73] flex-shrink-0 flex items-center justify-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-surface-cream"></span>
+                  </span>
+                  <div class="min-w-0">
+                    <span
+                      class="font-label-stamp text-label-stamp uppercase text-ink-muted block tracking-wider">GITHUB</span>
+                    <span class="font-label-code text-label-code text-ink-espresso font-bold truncate block">asifsheik •
+                      repos</span>
+                  </div>
+                </a>
+                <!-- Tag 3: Email -->
+                <a class="flex items-center gap-space-sm p-space-sm bg-[#fce7be] rounded-lg shadow-sm hover:shadow hover:-translate-y-0.5 transition-all"
+                  href="mailto:asifshaikemail@gmail.com">
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#dfba73] flex-shrink-0 flex items-center justify-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-surface-cream"></span>
+                  </span>
+                  <div class="min-w-0">
+                    <span class="font-label-stamp text-label-stamp uppercase text-ink-muted block tracking-wider">DIRECT
+                      EMAIL</span>
+                    <span
+                      class="font-label-code text-label-code text-ink-espresso font-bold truncate block">asifshaikemail@gmail.com</span>
+                  </div>
+                </a>
+                <!-- Tag 4: Location -->
+                <div class="flex items-center gap-space-sm p-space-sm bg-[#fce7be] rounded-lg shadow-sm">
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#dfba73] flex-shrink-0 flex items-center justify-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-surface-cream"></span>
+                  </span>
+                  <div class="min-w-0">
+                    <span class="font-label-stamp text-label-stamp uppercase text-ink-muted block tracking-wider">BASED
+                      IN</span>
+                    <span class="font-label-code text-label-code text-ink-espresso font-bold truncate block">Chennai,
+                      Tamil Nadu, India</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- QUICK TERMINAL RUNTIME / INSTALLER BANNER (like labd banner) -->
+      <section class="w-full max-w-7xl mx-auto px-gutter lg:px-gutter-desktop my-space-md">
+        <div
+          class="relative w-full bg-ink-espresso text-surface-cream rounded-2xl p-space-md lg:p-space-lg shadow-[0_12px_24px_rgba(32,28,24,0.12)] border border-surface-cream/10 overflow-hidden flex flex-col gap-space-md">
+          <div class="flex items-center justify-between border-b border-surface-cream/10 pb-space-xs text-xs">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#ba1a1a]/80 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-folder-ochre/80 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#5b7986] inline-block"></span>
+              </div>
+              <span
+                class="font-label-code text-surface-dim/80 text-[11px] pl-2 border-l border-surface-cream/10 flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[14px] text-tertiary-fixed">terminal</span>
+                mern-workbench.sh — v2.5
+              </span>
+            </div>
+            <div class="flex items-center gap-2 font-label-code text-[11px]">
+              <span
+                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-cream/10 text-tertiary-fixed border border-surface-cream/10">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span>
+                READY FOR FULL-STACK ROLES
+              </span>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md pt-0.5">
+            <div class="flex flex-col space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="font-label-stamp text-label-stamp uppercase tracking-widest text-primary-fixed">PORTAL
+                  RUNTIME</span>
+                <span class="text-surface-dim/40 text-xs">/</span>
+                <span class="font-label-code text-label-code text-folder-ochre">CHENNAI_NODE</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-surface-cream tracking-tight">
+                Asif Shaik — Developer Portfolio &amp; Roadmap
+              </h3>
+              <p class="font-body-sm text-body-sm text-surface-dim max-w-xl leading-relaxed">
+                Clean component architectures, modular Express routes, and rigorous data persistence. Built with
+                production-ready full-stack software practices.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-space-sm w-full lg:w-auto lg:justify-end">
+              <a class="inline-flex items-center gap-1.5 px-space-md py-space-xs rounded-full bg-surface-cream text-ink-espresso font-body-sm text-body-sm font-semibold hover:bg-primary-fixed hover:-translate-y-0.5 transition-all shadow-sm"
+                href="#learning-pathway">
+                <span>View 5-Stage Journey</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+              </a>
+              <div
+                class="inline-flex items-center bg-inverse-surface/90 border border-surface-cream/15 rounded-full px-space-md py-1.5 gap-space-sm shadow-inner">
+                <span class="font-label-code text-[12px] text-folder-ochre font-mono select-none">$</span>
+                <span
+                  class="font-label-code text-label-code text-surface-cream font-mono truncate max-w-[210px] sm:max-w-none">git
+                  clone https://github.com/Asifsheik</span>
+                <button
+                  class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-cream/15 hover:bg-surface-cream/25 active:scale-95 text-surface-cream font-label-code text-[11px] transition-all border border-surface-cream/10"
+                  id="copy-btn"
+                  onclick="navigator.clipboard.writeText('git clone https://github.com/Asifsheik'); document.getElementById('copy-label').innerText = 'Copied!'; setTimeout(() => { document.getElementById('copy-label').innerText = 'Copy'; }, 2000);">
+                  <span class="material-symbols-outlined text-[13px]">content_copy</span>
+                  <span id="copy-label">Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- INTERACTIVE DESK / PINNED CORKBOARD CANVAS -->
+      <section class="w-full max-w-7xl mx-auto px-gutter lg:px-gutter-desktop my-space-lg" id="desk-canvas">
+        <div class="flex items-center justify-between mb-space-sm">
+          <span class="font-label-code text-label-code text-ink-muted flex items-center gap-2">
+            <span class="material-symbols-outlined text-[16px] text-ink-terracotta">pan_tool</span>
+            drag things around, double-click to read notes • tactile workspace
+          </span>
+          <button
+            class="px-3 py-1 rounded-md bg-surface-kraft text-ink-espresso font-label-code text-label-code hover:bg-surface-dim transition-colors shadow-sm"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Tidy the desk
+          </button>
+        </div>
+        <!-- Cork / Drafting Mat Outer Container -->
+        <div
+          class="relative w-full min-h-[640px] bg-[#e8dfcf] rounded-2xl p-space-md lg:p-space-xl overflow-hidden shadow-inner border border-ink-espresso/10">
+          <!-- Subtle drafting grid background overlay -->
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(32,28,24,0.06)_1px,transparent_0)] bg-[length:24px_24px] pointer-events-none">
+          </div>
+          <!-- DESK SEARCH BAR (Anchored Top-Center) -->
+          <div class="relative z-10 max-w-lg mx-auto mb-space-xl">
+            <div
+              class="bg-surface-cream rounded-xl p-space-md shadow-[0_8px_20px_rgba(32,28,24,0.08)] flex flex-col space-y-space-xs">
+              <span class="font-label-stamp text-label-stamp uppercase tracking-widest text-ink-muted">SEARCH THE
+                WORKSPACE</span>
+              <h4 class="font-headline-md text-[18px] text-ink-espresso font-bold">Looking for something?</h4>
+              <div class="relative flex items-center bg-surface-kraft/60 rounded-lg px-space-md py-space-xs">
+                <span class="material-symbols-outlined text-ink-muted text-[18px] mr-2">search</span>
+                <input
+                  class="w-full bg-transparent font-body-sm text-body-sm text-ink-espresso focus:outline-none placeholder:text-ink-muted/70"
+                  id="desk-search" placeholder="Search skills, stack, stages or projects..." type="text">
+                <div class="flex items-center gap-1">
+                  <span
+                    class="px-1.5 py-0.5 rounded bg-surface-cream text-ink-muted font-label-code text-[10px] shadow-sm">Ctrl</span>
+                  <span
+                    class="px-1.5 py-0.5 rounded bg-surface-cream text-ink-muted font-label-code text-[10px] shadow-sm">K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PINNED CANVAS ARTIFACTS GRID / DESK MOSAIC -->
+          <div class="relative grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center">
+            <!-- Artifact 1: Sticky Note (Peach) - Backend Stack (Left side tilt) -->
+            <div class="md:col-span-4 relative group transform -rotate-2 hover:rotate-0 transition-transform">
+              <!-- Pushpin SVG -->
+              <div
+                class="absolute -top-3 left-1/2 -translate-x-1/2 z-20 w-4 h-4 rounded-full bg-pin-red shadow-md flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-surface-cream/80"></div>
+              </div>
+              <!-- Tape piece -->
+              <div
+                class="absolute -top-2 left-6 w-16 h-5 bg-tape-paper transform -rotate-12 backdrop-blur-sm z-10 pointer-events-none">
+              </div>
+              <div class="bg-[#fce7be] p-space-md rounded-md shadow-[0_6px_14px_rgba(32,28,24,0.08)]">
+                <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-muted block">STACK •
+                  BACKEND</span>
+                <h5 class="font-headline-md text-[18px] font-bold text-ink-espresso mt-1">Node.js &amp; Express</h5>
+                <p class="font-body-sm text-body-sm text-ink-espresso mt-2 leading-relaxed">
+                  Writing scalable server-side JavaScript, architectural REST routing, modular controllers, custom
+                  middleware, and JWT session handling.
+                </p>
+                <div class="mt-space-sm flex flex-wrap gap-1">
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-cream/80 font-label-code text-[11px] text-ink-espresso">Node.js</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-cream/80 font-label-code text-[11px] text-ink-espresso">Express</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-cream/80 font-label-code text-[11px] text-ink-espresso">REST
+                    APIs</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-cream/80 font-label-code text-[11px] text-ink-espresso">JWT
+                    Auth</span>
+                </div>
+              </div>
+            </div>
+            <!-- Artifact 2: Centerpiece Polaroid ID Card -->
+            <div class="md:col-span-4 relative group transform rotate-1 hover:scale-105 transition-all z-20">
+              <!-- Washi tape at top -->
+              <div
+                class="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 bg-tape-paper transform rotate-2 shadow-sm z-30 pointer-events-none">
+              </div>
+              <div
+                class="bg-surface-cream p-4 pb-6 rounded shadow-[0_12px_24px_rgba(32,28,24,0.12)] border border-ink-espresso/5 flex flex-col items-center">
+                <!-- Simulated Photograph -->
+                <div
+                  class="w-full h-56 rounded bg-surface-kraft flex flex-col items-center justify-center p-4 relative overflow-hidden">
+                  <div
+                    class="w-24 h-24 rounded-full bg-gradient-to-tr from-primary to-folder-ochre flex items-center justify-center shadow-inner text-surface-cream mb-2">
+                    <span class="material-symbols-outlined text-[48px]">terminal</span>
+                  </div>
+                  <span class="font-headline-md text-[16px] text-ink-espresso font-bold">Asif Shaik</span>
+                  <span class="font-label-stamp text-label-stamp text-ink-muted uppercase">S Mohamed Asif •
+                    Chennai</span>
+                  <span
+                    class="mt-2 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-cream font-label-code text-[11px] text-ink-terracotta">
+                    <span class="w-1.5 h-1.5 rounded-full bg-ink-terracotta animate-ping"></span>
+                    Active Learning Sprint
+                  </span>
+                </div>
+                <!-- Hand-written caption under photo -->
+                <div class="mt-3 text-center">
+                  <p class="font-editorial-italic text-[16px] text-ink-espresso">that’s me — full-stack MERN developer
+                  </p>
+                  <p class="font-label-code text-[11px] text-ink-muted mt-0.5">
+                    B.E. Computer Science • Anna University
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Artifact 3: Sticky Note (Cyan/Blue) - Frontend Stack (Right tilt) -->
+            <div class="md:col-span-4 relative group transform rotate-2 hover:rotate-0 transition-transform">
+              <!-- Pushpin SVG -->
+              <div
+                class="absolute -top-3 left-1/2 -translate-x-1/2 z-20 w-4 h-4 rounded-full bg-pin-red shadow-md flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-surface-cream/80"></div>
+              </div>
+              <div class="bg-[#d6e2e9] p-space-md rounded-md shadow-[0_6px_14px_rgba(32,28,24,0.08)]">
+                <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-muted block">STACK •
+                  FRONTEND</span>
+                <h5 class="font-headline-md text-[18px] font-bold text-ink-espresso mt-1">React &amp; Modern UI</h5>
+                <p class="font-body-sm text-body-sm text-ink-espresso mt-2 leading-relaxed">
+                  Component hierarchy, custom hooks, conditional DOM rendering, single-page routing, state lifting, and
+                  consuming live REST APIs.
+                </p>
+                <div class="mt-space-sm flex flex-wrap gap-1">
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-cream/80 font-label-code text-[11px] text-ink-espresso">React</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-cream/80 font-label-code text-[11px] text-ink-espresso">Hooks</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-cream/80 font-label-code text-[11px] text-ink-espresso">React
+                    Router</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-cream/80 font-label-code text-[11px] text-ink-espresso">Tailwind
+                    CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Second Row of Desk Pinned Memos -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mt-space-lg">
+            <!-- Memo 4: Database / MongoDB Sticky -->
+            <div
+              class="relative bg-[#eed5a1] p-space-md rounded-md shadow-md transform -rotate-1 hover:rotate-0 transition-transform">
+              <div class="absolute -top-2 right-4 w-12 h-4 bg-tape-paper transform rotate-6"></div>
+              <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-muted">DATABASE
+                PERSISTENCE</span>
+              <h5 class="font-headline-md text-[17px] font-bold text-ink-espresso mt-1">MongoDB &amp; Mongoose</h5>
+              <p class="font-body-sm text-body-sm text-ink-muted mt-1">
+                Schema validations, embedded documents, referential modeling, and indexed CRUD pipeline design.
+              </p>
+              <div class="mt-2 font-label-code text-[11px] text-ink-espresso">
+                <code>mongoose.model('Record', schema)</code>
+              </div>
+            </div>
+            <!-- Memo 5: Hat I Wear - Operations & Scale (Tactile Index Card) -->
+            <div
+              class="relative bg-surface-cream p-space-md rounded-md shadow-md border-l-4 border-l-ink-terracotta transform rotate-1 hover:rotate-0 transition-transform"
+              id="operations-card">
+              <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-terracotta">STACK •
+                ARCHITECTURE</span>
+              <h5 class="font-headline-md text-[17px] font-bold text-ink-espresso mt-1">RESTful APIs &amp; Services</h5>
+              <p class="font-body-sm text-body-sm text-ink-muted mt-1 leading-snug">
+                Modular route controllers, authentication middlewares, error handling pipelines, and clean client-server
+                integration.
+              </p>
+              <div class="mt-3 flex items-center justify-between text-ink-muted font-label-code text-[11px]">
+                <span>MODULAR MVC</span>
+                <span>SECURE APIS</span>
+              </div>
+            </div>
+            <!-- Memo 6: Web Foundations Note (Lavender tint) -->
+            <div
+              class="relative bg-[#e2d9f3] p-space-md rounded-md shadow-md transform -rotate-2 hover:rotate-0 transition-transform">
+              <div class="absolute -top-2 left-6 w-14 h-4 bg-tape-paper transform -rotate-6"></div>
+              <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-muted">SOLID
+                FOUNDATION</span>
+              <h5 class="font-headline-md text-[17px] font-bold text-ink-espresso mt-1">Semantic Web &amp; ES6+</h5>
+              <p class="font-body-sm text-body-sm text-ink-muted mt-1">
+                Flexbox, CSS Grid layouts, semantic DOM structures, event loops, async/await, and GitHub versioning.
+              </p>
+              <div class="mt-2 flex items-center gap-1 font-label-code text-[11px] text-ink-espresso">
+                <span class="material-symbols-outlined text-[14px] text-ink-terracotta">verified</span>
+                <span>Completed • 92% confidence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MERN LEARNING JOURNEY — STAGE BY STAGE PATHWAY -->
+      <section class="w-full max-w-7xl mx-auto px-gutter lg:px-gutter-desktop py-space-xl" id="learning-pathway">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+          <div>
+            <div class="flex items-center gap-space-xs text-ink-muted mb-1">
+              <span class="material-symbols-outlined text-[18px] text-ink-terracotta">route</span>
+              <span class="font-label-stamp text-label-stamp uppercase tracking-widest">ROADMAP • 2025 — PRESENT</span>
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-ink-espresso">
+              Learning journey — MERN stack development
+            </h2>
+            <p class="font-body-md text-body-md text-ink-muted max-w-2xl mt-1">
+              This is my stage-by-stage progression through the full MERN stack — from fundamental JavaScript to a
+              complete, deployed capstone architecture.
+            </p>
+          </div>
+          <!-- Quick Metrics Counters -->
+          <div class="flex items-center gap-space-md bg-surface-cream px-space-md py-space-sm rounded-xl shadow-sm">
+            <div class="flex flex-col">
+              <span class="font-headline-md text-[20px] font-bold text-ink-espresso">5</span>
+              <span class="font-label-stamp text-[10px] text-ink-muted uppercase">Stages</span>
+            </div>
+            <div class="w-px h-8 bg-ink-espresso/10"></div>
+            <div class="flex flex-col">
+              <span class="font-headline-md text-[20px] font-bold text-ink-terracotta">4</span>
+              <span class="font-label-stamp text-[10px] text-ink-muted uppercase">Technologies</span>
+            </div>
+            <div class="w-px h-8 bg-ink-espresso/10"></div>
+            <div class="flex flex-col">
+              <span class="font-headline-md text-[20px] font-bold text-primary">2</span>
+              <span class="font-label-stamp text-[10px] text-ink-muted uppercase">In Progress</span>
+            </div>
+          </div>
+        </div>
+        <!-- 5 Stage Accordion / Cards List -->
+        <div class="flex flex-col space-y-space-md">
+          <!-- Stage 01: Web Foundations (Completed) -->
+          <div class="bg-surface-cream rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+              <div class="flex items-start gap-space-md">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#d6e2e9] text-tertiary flex items-center justify-center font-label-code font-bold text-[14px] shrink-0">
+                  01
+                </div>
+                <div>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-muted">STAGE
+                      01</span>
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-kraft text-ink-espresso font-label-code text-[11px]">
+                      <span class="material-symbols-outlined text-[14px] text-[#42606d]">check_circle</span>
+                      Completed
+                    </span>
+                  </div>
+                  <h3 class="font-headline-md text-[20px] font-bold text-ink-espresso mt-0.5">
+                    Web foundations — HTML, CSS &amp; JavaScript
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-ink-muted mt-1 max-w-2xl">
+                    Built a solid base in semantic markup, responsive flexbox/grid layouts, DOM traversal, and
+                    JavaScript fundamentals — the layer everything else in the stack sits on.
+                  </p>
+                  <!-- Stack Pills -->
+                  <div class="flex flex-wrap gap-1.5 mt-space-sm">
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">HTML5</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">CSS3</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">Flexbox
+                      &amp; Grid</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">JavaScript
+                      ES6+</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">DOM
+                      &amp; Events</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Progress Ring Graphic -->
+              <div
+                class="flex items-center gap-space-sm self-end lg:self-center bg-surface-container-low px-space-md py-space-xs rounded-xl">
+                <div class="flex flex-col text-right">
+                  <span class="font-label-stamp text-[10px] uppercase text-ink-muted">Confidence</span>
+                  <span class="font-headline-md text-[18px] font-bold text-ink-espresso">92%</span>
+                </div>
+                <div class="w-12 h-12 relative flex items-center justify-center">
+                  <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
+                    <path class="text-surface-variant"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-width="3.5"></path>
+                    <path class="text-ink-terracotta"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3.5"></path>
+                  </svg>
+                  <span class="material-symbols-outlined text-[16px] text-ink-terracotta absolute">check</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Stage 02: React (Completed) -->
+          <div class="bg-surface-cream rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+              <div class="flex items-start gap-space-md">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#fce7be] text-secondary flex items-center justify-center font-label-code font-bold text-[14px] shrink-0">
+                  02
+                </div>
+                <div>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-muted">STAGE
+                      02</span>
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-kraft text-ink-espresso font-label-code text-[11px]">
+                      <span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                      Completed
+                    </span>
+                  </div>
+                  <h3 class="font-headline-md text-[20px] font-bold text-ink-espresso mt-0.5">
+                    React — component-driven interfaces
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-ink-muted mt-1 max-w-2xl">
+                    Thinking in modular components: props, dynamic state, hooks (useState, useEffect), conditional
+                    rendering, forms, single-page routing, and API hydration.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-space-sm">
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">React</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">JSX</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">Hooks</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">React
+                      Router</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">API
+                      Integration</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-space-sm self-end lg:self-center bg-surface-container-low px-space-md py-space-xs rounded-xl">
+                <div class="flex flex-col text-right">
+                  <span class="font-label-stamp text-[10px] uppercase text-ink-muted">Confidence</span>
+                  <span class="font-headline-md text-[18px] font-bold text-ink-espresso">84%</span>
+                </div>
+                <div class="w-12 h-12 relative flex items-center justify-center">
+                  <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
+                    <path class="text-surface-variant"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-width="3.5"></path>
+                    <path class="text-folder-ochre"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-dasharray="84, 100" stroke-linecap="round" stroke-width="3.5"></path>
+                  </svg>
+                  <span class="material-symbols-outlined text-[16px] text-folder-ochre absolute">thumb_up</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Stage 03: Node.js & Express (In Progress) -->
+          <div
+            class="bg-surface-cream rounded-xl p-space-lg shadow-sm border-l-4 border-l-ink-terracotta hover:shadow-md transition-shadow">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+              <div class="flex items-start gap-space-md">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-code font-bold text-[14px] shrink-0">
+                  03
+                </div>
+                <div>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-terracotta">STAGE
+                      03</span>
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed/50 text-on-primary-fixed-variant font-label-code text-[11px]">
+                      <span class="w-2 h-2 rounded-full bg-ink-terracotta animate-pulse"></span>
+                      In Progress • Active Sprint
+                    </span>
+                  </div>
+                  <h3 class="font-headline-md text-[20px] font-bold text-ink-espresso mt-0.5">
+                    Node.js &amp; Express — the server side
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-ink-muted mt-1 max-w-2xl">
+                    Writing backend JavaScript: REST API route mapping, controllers, authentication middleware, JWT
+                    token verification, and structured error handling.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-space-sm">
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">Node.js</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">Express.js</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">REST
+                      APIs</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">Middleware</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">JWT
+                      Auth</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">Postman</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-space-sm self-end lg:self-center bg-surface-container-low px-space-md py-space-xs rounded-xl">
+                <div class="flex flex-col text-right">
+                  <span class="font-label-stamp text-[10px] uppercase text-ink-muted">Confidence</span>
+                  <span class="font-headline-md text-[18px] font-bold text-ink-espresso">72%</span>
+                </div>
+                <div class="w-12 h-12 relative flex items-center justify-center">
+                  <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
+                    <path class="text-surface-variant"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-width="3.5"></path>
+                    <path class="text-ink-terracotta"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-dasharray="72, 100" stroke-linecap="round" stroke-width="3.5"></path>
+                  </svg>
+                  <span class="material-symbols-outlined text-[16px] text-ink-terracotta absolute">bolt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Stage 04: MongoDB (In Progress) -->
+          <div class="bg-surface-cream rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+              <div class="flex items-start gap-space-md">
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-code font-bold text-[14px] shrink-0">
+                  04
+                </div>
+                <div>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-muted">STAGE
+                      04</span>
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-kraft text-ink-espresso font-label-code text-[11px]">
+                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                      In Progress
+                    </span>
+                  </div>
+                  <h3 class="font-headline-md text-[20px] font-bold text-ink-espresso mt-0.5">
+                    MongoDB — data modelling &amp; persistence
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-ink-muted mt-1 max-w-2xl">
+                    Designing flexible document schemas with Mongoose, modeling relationships, running full CRUD
+                    operations, and connecting persistent databases to Express servers.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-space-sm">
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">MongoDB</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">Mongoose</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">Schema
+                      Design</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">CRUD</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-espresso">Aggregation
+                      Basics</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-space-sm self-end lg:self-center bg-surface-container-low px-space-md py-space-xs rounded-xl">
+                <div class="flex flex-col text-right">
+                  <span class="font-label-stamp text-[10px] uppercase text-ink-muted">Confidence</span>
+                  <span class="font-headline-md text-[18px] font-bold text-ink-espresso">65%</span>
+                </div>
+                <div class="w-12 h-12 relative flex items-center justify-center">
+                  <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
+                    <path class="text-surface-variant"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-width="3.5"></path>
+                    <path class="text-secondary"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-dasharray="65, 100" stroke-linecap="round" stroke-width="3.5"></path>
+                  </svg>
+                  <span class="material-symbols-outlined text-[16px] text-secondary absolute">storage</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Stage 05: Capstone (Up Next) -->
+          <div class="bg-surface-cream rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow opacity-90">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+              <div class="flex items-start gap-space-md">
+                <div
+                  class="w-10 h-10 rounded-full bg-surface-kraft text-ink-muted flex items-center justify-center font-label-code font-bold text-[14px] shrink-0">
+                  05
+                </div>
+                <div>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-muted">STAGE
+                      05</span>
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-variant text-ink-muted font-label-code text-[11px]">
+                      <span class="material-symbols-outlined text-[14px]">schedule</span>
+                      Up next • Capstone Target
+                    </span>
+                  </div>
+                  <h3 class="font-headline-md text-[20px] font-bold text-ink-espresso mt-0.5">
+                    Full-stack capstone — build, connect, deploy
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-ink-muted mt-1 max-w-2xl">
+                    Bringing every layer together in one complete MERN application: authenticated APIs, persistent
+                    MongoDB collections, responsive React UX, and live cloud deployment.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mt-space-sm">
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-muted">End-to-End
+                      Builds</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-muted">Auth
+                      Flows</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-muted">Deployment</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-md bg-surface-container font-label-code text-label-code text-ink-muted">Documentation</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-space-sm self-end lg:self-center bg-surface-container-low px-space-md py-space-xs rounded-xl">
+                <div class="flex flex-col text-right">
+                  <span class="font-label-stamp text-[10px] uppercase text-ink-muted">Confidence</span>
+                  <span class="font-headline-md text-[18px] font-bold text-ink-muted">40%</span>
+                </div>
+                <div class="w-12 h-12 relative flex items-center justify-center">
+                  <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
+                    <path class="text-surface-variant"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-width="3.5"></path>
+                    <path class="text-ink-muted"
+                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
+                      stroke="currentColor" stroke-dasharray="40, 100" stroke-linecap="round" stroke-width="3.5"></path>
+                  </svg>
+                  <span class="material-symbols-outlined text-[16px] text-ink-muted absolute">rocket_launch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECTS & ARCHIVE SECTION -->
+      <section class="w-full max-w-7xl mx-auto px-gutter lg:px-gutter-desktop py-space-lg" id="projects-archive">
+        <div class="flex items-baseline justify-between mb-space-md border-b border-ink-espresso/10 pb-space-sm">
+          <div>
+            <span class="font-label-stamp text-label-stamp uppercase tracking-widest text-ink-muted">OFFLINE BUILDS
+              &amp; REPOSITORIES</span>
+            <h2 class="font-headline-lg text-headline-lg text-ink-espresso">Projects &amp; Initiatives</h2>
+          </div>
+          <a class="font-label-code text-label-code text-primary font-bold hover:underline flex items-center gap-1"
+            href="https://github.com/Asifsheik?tab=repositories" rel="noopener" target="_blank">
+            <span>see everything on GitHub</span>
+            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+          </a>
+        </div>
+        <!-- 2 Project Cards in Tactile Manila Binder Style -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg md:gap-gutter-desktop">
+          <!-- Project 1: Greenden — Interior Plant & Design -->
+          <div
+            class="project-card group relative bg-surface-container-lowest border border-ink-espresso/10 rounded-2xl p-space-lg shadow-sm hover:shadow-[0_12px_24px_rgba(32,28,24,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden h-full border-t-2 border-t-folder-ochre/80 duration-500 ease-out">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-folder-ochre/20 to-transparent pointer-events-none rounded-tr-2xl">
+            </div>
+            <div class="flex flex-col">
+              <div
+                class="flex items-center justify-between gap-2 pb-space-sm border-b border-ink-espresso/10 mb-space-sm">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-ink-terracotta animate-pulse"></span>
+                  <span
+                    class="font-label-stamp text-label-stamp text-ink-espresso uppercase tracking-wider font-bold">INDEX
+                    • 01</span>
+                  <span class="text-ink-muted/40 font-mono text-[11px]">/</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-primary-fixed/50 text-on-primary-fixed-variant font-label-code text-[11px] font-bold">TAILWIND
+                    CSS</span>
+                </div>
+                <span class="font-label-code text-[11px] text-ink-muted truncate font-mono">Greenden_Tailwind_CSS</span>
+              </div>
+              <div class="flex items-baseline justify-between mt-1">
+                <h3
+                  class="font-headline-md text-[20px] font-bold text-ink-espresso group-hover:text-primary transition-colors tracking-tight">
+                  Greenden — Interior Plant &amp; Design
+                </h3>
+              </div>
+              <p class="font-body-md text-body-md text-ink-muted mt-2.5 leading-relaxed">
+                Responsive plant decor and interior design provider web application built with Tailwind CSS, custom
+                components, responsive grids, and clean layout system.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-space-md">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">Tailwind
+                  CSS</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">HTML5</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">Responsive
+                  Design</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">UI
+                  Components</span>
+              </div>
+            </div>
+            <div class="mt-space-lg pt-space-sm border-t border-ink-espresso/10 flex items-center justify-between">
+              <div class="flex items-center gap-1.5 text-ink-muted font-label-code text-[11px]">
+                <span class="material-symbols-outlined text-[14px] text-ink-terracotta">public</span>
+                <span>Public Repo</span>
+              </div>
+              <a class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-kraft hover:bg-ink-espresso hover:text-surface-cream text-ink-espresso font-label-code text-label-code font-bold transition-all shadow-sm"
+                href="https://github.com/Asifsheik/Greenden_Tailwind_CSS" rel="noopener" target="_blank">
+                <span>View Repository</span>
+                <span class="material-symbols-outlined text-[15px]">north_east</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Notes-Maker Web App -->
+          <div
+            class="project-card group relative bg-surface-container-lowest border border-ink-espresso/10 rounded-2xl p-space-lg shadow-sm hover:shadow-[0_12px_24px_rgba(32,28,24,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden h-full border-t-2 border-t-folder-ochre/80 duration-500 ease-out">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#fce7be]/40 to-transparent pointer-events-none rounded-tr-2xl">
+            </div>
+            <div class="flex flex-col">
+              <div
+                class="flex items-center justify-between gap-2 pb-space-sm border-b border-ink-espresso/10 mb-space-sm">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-folder-ochre"></span>
+                  <span
+                    class="font-label-stamp text-label-stamp text-ink-espresso uppercase tracking-wider font-bold">INDEX
+                    • 02</span>
+                  <span class="text-ink-muted/40 font-mono text-[11px]">/</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-[#fce7be] text-ink-espresso font-label-code text-[11px] font-bold">DOM
+                    &amp; JS</span>
+                </div>
+                <span class="font-label-code text-[11px] text-ink-muted truncate font-mono">Notes-Maker</span>
+              </div>
+              <div class="flex items-baseline justify-between mt-1">
+                <h3
+                  class="font-headline-md text-[20px] font-bold text-ink-espresso group-hover:text-primary transition-colors tracking-tight">
+                  Notes-Maker Web App
+                </h3>
+              </div>
+              <p class="font-body-md text-body-md text-ink-muted mt-2.5 leading-relaxed">
+                Interactive note-taking application using overlay popups, dynamic DOM manipulation, and local state
+                management to create, organize, and delete notes seamlessly.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-space-md">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">JavaScript</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">DOM
+                  Manipulation</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">CSS3</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">LocalStorage</span>
+              </div>
+            </div>
+            <div class="mt-space-lg pt-space-sm border-t border-ink-espresso/10 flex items-center justify-between">
+              <div class="flex items-center gap-1.5 text-ink-muted font-label-code text-[11px]">
+                <span class="material-symbols-outlined text-[14px] text-secondary">widgets</span>
+                <span>Interactive Utility</span>
+              </div>
+              <a class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-kraft hover:bg-ink-espresso hover:text-surface-cream text-ink-espresso font-label-code text-label-code font-bold transition-all shadow-sm"
+                href="https://github.com/Asifsheik/Notes-Maker" rel="noopener" target="_blank">
+                <span>View Repository</span>
+                <span class="material-symbols-outlined text-[15px]">north_east</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Tourplanner -->
+          <div
+            class="project-card group relative bg-surface-container-lowest border border-ink-espresso/10 rounded-2xl p-space-lg shadow-sm hover:shadow-[0_12px_24px_rgba(32,28,24,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden h-full border-t-2 border-t-folder-ochre/80 duration-500 ease-out">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#d6e2e9]/50 to-transparent pointer-events-none rounded-tr-2xl">
+            </div>
+            <div class="flex flex-col">
+              <div
+                class="flex items-center justify-between gap-2 pb-space-sm border-b border-ink-espresso/10 mb-space-sm">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  <span
+                    class="font-label-stamp text-label-stamp text-ink-espresso uppercase tracking-wider font-bold">INDEX
+                    • 03</span>
+                  <span class="text-ink-muted/40 font-mono text-[11px]">/</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-[#d6e2e9] text-tertiary font-label-code text-[11px] font-bold">WORKFLOW
+                    UI</span>
+                </div>
+                <span class="font-label-code text-[11px] text-ink-muted truncate font-mono">Tourplanner</span>
+              </div>
+              <div class="flex items-baseline justify-between mt-1">
+                <h3
+                  class="font-headline-md text-[20px] font-bold text-ink-espresso group-hover:text-primary transition-colors tracking-tight">
+                  Tourplanner
+                </h3>
+              </div>
+              <p class="font-body-md text-body-md text-ink-muted mt-2.5 leading-relaxed">
+                Interactive itinerary and travel planning UI exploring stage workflows, route breakdowns, and responsive
+                booking layouts.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-space-md">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">HTML5</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">CSS3</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">Workflow
+                  UI</span>
+              </div>
+            </div>
+            <div class="mt-space-lg pt-space-sm border-t border-ink-espresso/10 flex items-center justify-between">
+              <div class="flex items-center gap-1.5 text-ink-muted font-label-code text-[11px]">
+                <span class="material-symbols-outlined text-[14px] text-tertiary">travel_explore</span>
+                <span>Public Repo</span>
+              </div>
+              <a class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-kraft hover:bg-ink-espresso hover:text-surface-cream text-ink-espresso font-label-code text-label-code font-bold transition-all shadow-sm"
+                href="https://github.com/Asifsheik/Tourplanner" rel="noopener" target="_blank">
+                <span>View Repository</span>
+                <span class="material-symbols-outlined text-[15px]">north_east</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: Guessing Game 1.0 -->
+          <div
+            class="project-card group relative bg-surface-container-lowest border border-ink-espresso/10 rounded-2xl p-space-lg shadow-sm hover:shadow-[0_12px_24px_rgba(32,28,24,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden h-full border-t-2 border-t-folder-ochre/80 duration-500 ease-out">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#e2d9f3]/50 to-transparent pointer-events-none rounded-tr-2xl">
+            </div>
+            <div class="flex flex-col">
+              <div
+                class="flex items-center justify-between gap-2 pb-space-sm border-b border-ink-espresso/10 mb-space-sm">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-primary"></span>
+                  <span
+                    class="font-label-stamp text-label-stamp text-ink-espresso uppercase tracking-wider font-bold">INDEX
+                    • 04</span>
+                  <span class="text-ink-muted/40 font-mono text-[11px]">/</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-[#e2d9f3] text-ink-espresso font-label-code text-[11px] font-bold">GAME
+                    LOGIC</span>
+                </div>
+                <span class="font-label-code text-[11px] text-ink-muted truncate font-mono">Guessing-Game-1.0</span>
+              </div>
+              <div class="flex items-baseline justify-between mt-1">
+                <h3
+                  class="font-headline-md text-[20px] font-bold text-ink-espresso group-hover:text-primary transition-colors tracking-tight">
+                  Guessing Game 1.0
+                </h3>
+              </div>
+              <p class="font-body-md text-body-md text-ink-muted mt-2.5 leading-relaxed">
+                Number guessing interactive mini-game with real-time DOM feedback, scoring logic, and event handling.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-space-md">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">JavaScript
+                  ES6</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">DOM
+                  Events</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">Game
+                  Logic</span>
+              </div>
+            </div>
+            <div class="mt-space-lg pt-space-sm border-t border-ink-espresso/10 flex items-center justify-between">
+              <div class="flex items-center gap-1.5 text-ink-muted font-label-code text-[11px]">
+                <span class="material-symbols-outlined text-[14px] text-primary">sports_esports</span>
+                <span>Interactive Game</span>
+              </div>
+              <a class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-kraft hover:bg-ink-espresso hover:text-surface-cream text-ink-espresso font-label-code text-label-code font-bold transition-all shadow-sm"
+                href="https://github.com/Asifsheik/Guessing-Game-1.0" rel="noopener" target="_blank">
+                <span>View Repository</span>
+                <span class="material-symbols-outlined text-[15px]">north_east</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 5: Udemy Showcase & Portfolio -->
+          <div
+            class="project-card group relative bg-surface-container-lowest border border-ink-espresso/10 rounded-2xl p-space-lg shadow-sm hover:shadow-[0_12px_24px_rgba(32,28,24,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden h-full border-t-2 border-t-folder-ochre/80 duration-500 ease-out md:col-span-2">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-folder-ochre/20 to-transparent pointer-events-none rounded-tr-2xl">
+            </div>
+            <div class="flex flex-col">
+              <div
+                class="flex items-center justify-between gap-2 pb-space-sm border-b border-ink-espresso/10 mb-space-sm">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  <span
+                    class="font-label-stamp text-label-stamp text-ink-espresso uppercase tracking-wider font-bold">INDEX
+                    • 05</span>
+                  <span class="text-ink-muted/40 font-mono text-[11px]">/</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-primary-fixed/50 text-on-primary-fixed-variant font-label-code text-[11px] font-bold">GITHUB
+                    PAGES</span>
+                </div>
+                <span class="font-label-code text-[11px] text-ink-muted truncate font-mono">Udemy-project</span>
+              </div>
+              <div class="flex items-baseline justify-between mt-1">
+                <h3
+                  class="font-headline-md text-[20px] font-bold text-ink-espresso group-hover:text-primary transition-colors tracking-tight">
+                  Udemy Showcase &amp; Portfolio
+                </h3>
+              </div>
+              <p class="font-body-md text-body-md text-ink-muted mt-2.5 leading-relaxed max-w-3xl">
+                Foundational responsive full-page builds and exercises from full-stack web curriculum. Hosted live on
+                GitHub Pages with clean cross-device viewports.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-space-md">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">HTML5</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">CSS3</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">GitHub
+                  Pages</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-surface-container-low border border-ink-espresso/5 font-label-code text-label-code text-ink-espresso">Full-Stack
+                  Curriculum</span>
+              </div>
+            </div>
+            <div class="mt-space-lg pt-space-sm border-t border-ink-espresso/10 flex items-center justify-between">
+              <div class="flex items-center gap-1.5 text-ink-muted font-label-code text-[11px]">
+                <span class="material-symbols-outlined text-[14px] text-secondary">rocket_launch</span>
+                <span>Deployed • GitHub Pages</span>
+              </div>
+              <a class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-kraft hover:bg-ink-espresso hover:text-surface-cream text-ink-espresso font-label-code text-label-code font-bold transition-all shadow-sm"
+                href="https://github.com/Asifsheik?tab=repositories" rel="noopener" target="_blank">
+                <span>View Repository</span>
+                <span class="material-symbols-outlined text-[15px]">north_east</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EDUCATION & PERSONAL INTERESTS TICKER -->
+      <section id="about" class="w-full max-w-[1280px] mx-auto px-gutter lg:px-gutter-desktop py-space-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+          <!-- Education Manila Dossier -->
+          <div class="lg:col-span-6 bg-surface-cream rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-space-xs text-ink-muted mb-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-ink-terracotta">school</span>
+                <span class="font-label-stamp text-label-stamp uppercase tracking-widest">EDUCATION • 2017 – 2021</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-ink-espresso">
+                Bachelor of Engineering in Computer Science
+              </h3>
+              <p class="font-body-md text-body-md text-ink-muted mt-1">
+                Anna University • Chennai, Tamil Nadu, India
+              </p>
+              <div class="mt-space-md">
+                <span
+                  class="font-label-stamp text-label-stamp uppercase tracking-wider text-ink-muted block mb-2">RELEVANT
+                  COURSEWORK</span>
+                <div class="flex flex-wrap gap-1.5">
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Python</span>
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Software
+                    Development</span>
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Information
+                    Security</span>
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Risk
+                    Management</span>
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Business
+                    Analytics</span>
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Data
+                    Analysis</span>
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Problem
+                    Solving using oops</span>
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Java</span>
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Data
+                    Structures</span>
+                  <span
+                    class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Database
+                    Management</span>
+                  <span class="px-2 py-1 rounded bg-surface-container font-label-code text-[11px] text-ink-espresso">Web
+                    Designing</span>
+
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-space-lg pt-space-sm border-t border-ink-espresso/10 flex items-center justify-between text-ink-muted font-label-code text-label-code">
+              <span>Degree Conferred: July 2021</span>
+              <span class="text-ink-terracotta font-bold">B.E. CSE</span>
+            </div>
+          </div>
+          <!-- Personal Interests Pinned Board -->
+          <div
+            class="lg:col-span-6 bg-[#eed5a1]/40 rounded-xl p-space-lg shadow-sm flex flex-col justify-between border border-folder-ochre/20">
+            <div>
+              <div class="flex items-center gap-space-xs text-ink-muted mb-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-ink-terracotta">interests</span>
+                <span class="font-label-stamp text-label-stamp uppercase tracking-widest">PERSONAL INTERESTS • OFF
+                  SCREEN</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-ink-espresso">
+                Continuous learning &amp; wellness
+              </h3>
+              <p class="font-body-sm text-body-sm text-ink-muted mt-1">
+                The habits and pursuits that keep the mind sharp outside of the code editor.
+              </p>
+              <div class="flex flex-col space-y-space-sm mt-space-md">
+                <!-- Interest 1 -->
+                <div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-cream shadow-sm">
+                  <span
+                    class="w-8 h-8 rounded-full bg-surface-kraft flex items-center justify-center text-ink-espresso">
+                    <span class="material-symbols-outlined text-[18px]">devices</span>
+                  </span>
+                  <div>
+                    <span class="font-headline-md text-[15px] font-bold text-ink-espresso block">Exploring technology
+                      updates</span>
+                    <span class="font-body-sm text-[12px] text-ink-muted block">Tracking open-source MERN trends, AI
+                      developer tools &amp; web architecture</span>
+                  </div>
+                </div>
+                <!-- Interest 2 -->
+                <div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-cream shadow-sm">
+                  <span
+                    class="w-8 h-8 rounded-full bg-surface-kraft flex items-center justify-center text-ink-espresso">
+                    <span class="material-symbols-outlined text-[18px]">price_change</span>
+                  </span>
+                  <div><span class="font-headline-md text-[15px] font-bold text-ink-espresso block">Algorithms &amp; Web
+                      Architectures</span>
+                    <span class="font-body-sm text-[12px] text-ink-muted block">Deep-diving into full-stack design
+                      patterns, async systems &amp; caching strategies</span>
+                  </div>
+                </div>
+                <!-- Interest 3 -->
+                <div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-cream shadow-sm">
+                  <span
+                    class="w-8 h-8 rounded-full bg-surface-kraft flex items-center justify-center text-ink-espresso">
+                    <span class="material-symbols-outlined text-[18px]">wb_twilight</span>
+                  </span>
+                  <div>
+                    <span class="font-headline-md text-[15px] font-bold text-ink-espresso block">Cycling to watch the
+                      sunrise</span>
+                    <span class="font-body-sm text-[12px] text-ink-muted block">Early morning coastal rides along the
+                      Chennai beachfront • mental clarity</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-space-md text-right">
+              <span class="font-editorial-italic text-editorial-italic text-ink-muted">“Balance builds
+                endurance.”</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FRESHLY ON THE DESK TICKER FOOTER STRIP -->
+      <!-- <section class="w-full max-w-[1280px] mx-auto px-gutter lg:px-gutter-desktop pb-space-lg">
+<div class="w-full bg-surface-container rounded-full px-space-lg py-space-sm flex flex-col md:flex-row items-center justify-between gap-space-sm shadow-sm">
+<div class="flex flex-wrap items-center gap-space-xs text-center md:text-left">
+<span class="font-label-stamp text-label-stamp uppercase text-ink-muted tracking-wider">— FRESHLY ON THE DESK —</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-cream font-label-code text-[11px] font-bold text-ink-espresso">NEW</span>
+<span class="font-label-code text-[12px] text-ink-espresso font-semibold">Stage 03: Express Routing &amp; JWT Verification</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-stamp text-label-stamp uppercase text-ink-muted">UPDATED WEEKLY</span>
+<a class="font-label-code text-label-code text-primary font-bold hover:underline" href="mailto:asifshaikemail@gmail.com">
+          Send a note →
+        </a>
+</div>
+</div>
+</section> -->
+    </div>
+    <script>
+      // Micro-interaction: Keyboard shortcut listener for Ctrl+K
+      document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          const input = document.getElementById('desk-search');
+          if (input) {
+            input.focus();
+            input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      });
+
+      // Client-side quick filter on the desk search input
+      const searchInput = document.getElementById('desk-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.toLowerCase().trim();
+          const pathItems = document.querySelectorAll('#learning-pathway > div > div');
+          pathItems.forEach(el => {
+            if (!q) {
+              el.style.opacity = '1';
+            } else {
+              const match = el.innerText.toLowerCase().includes(q);
+              el.style.opacity = match ? '1' : '0.25';
+            }
+          });
+        });
+      }
+
+      // Double-click a desk note to open it in a detail popup
+      (function () {
+        // The six notes are the direct children of the two grids inside the desk canvas
+        const notes = document.querySelectorAll('#desk-canvas .grid > div');
+        if (!notes.length) return;
+
+        // Build the popup once: a dimmed backdrop, a panel, and a close button
+        const overlay = document.createElement('div');
+        overlay.setAttribute('role', 'dialog');
+        overlay.setAttribute('aria-modal', 'true');
+        overlay.style.cssText = 'position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:1rem;background:rgba(32,28,24,0.55);';
+
+        const panel = document.createElement('div');
+        panel.style.cssText = 'position:relative;width:100%;max-width:28rem;';
+
+        const closeBtn = document.createElement('button');
+        closeBtn.type = 'button';
+        closeBtn.setAttribute('aria-label', 'Close note');
+        closeBtn.textContent = '×';
+        closeBtn.style.cssText = 'position:absolute;top:-0.75rem;right:-0.75rem;z-index:1;width:2rem;height:2rem;border-radius:9999px;border:1px solid rgba(32,28,24,0.15);background:#f9f7f1;color:#201c18;font-size:1.25rem;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(32,28,24,0.2);';
+
+        // Scrolling lives on the body, not the panel, so the close button is not clipped
+        const body = document.createElement('div');
+        body.style.cssText = 'max-height:85vh;overflow:auto;';
+
+        panel.append(closeBtn, body);
+        overlay.appendChild(panel);
+        document.body.appendChild(overlay);
+
+        function openNote(note) {
+          // Copy the note so the original on the desk is untouched
+          const copy = note.cloneNode(true);
+          copy.removeAttribute('id');
+          copy.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+          // Drop the pins and tape, and the tilt/hover classes that only suit the desk
+          copy.querySelectorAll('.absolute').forEach(el => el.remove());
+          copy.className = copy.className.split(/\s+/)
+            .filter(c => !/rotate|transform|transition|hover:/.test(c))
+            .join(' ');
+
+          body.replaceChildren(copy);
+          overlay.style.display = 'flex';
+          closeBtn.focus();
+        }
+
+        function closeNote() {
+          overlay.style.display = 'none';
+          body.replaceChildren();
+        }
+
+        notes.forEach(note => {
+          note.style.cursor = 'pointer';
+          note.addEventListener('dblclick', () => openNote(note));
+        });
+
+        closeBtn.addEventListener('click', closeNote);
+        // Clicking the dimmed backdrop (not the panel) also closes it
+        overlay.addEventListener('click', e => { if (e.target === overlay) closeNote(); });
+        document.addEventListener('keydown', e => {
+          if (e.key === 'Escape' && overlay.style.display === 'flex') closeNote();
+        });
+      })();
+    </script>
+  </main>
+  <footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(32,28,24,0.03)] py-space-xl mt-space-xl">
+    <div
+      class="max-w-[1280px] mx-auto px-gutter lg:px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-lg">
+      <div class="flex flex-col items-center md:items-start">
+        <div class="flex items-center gap-space-xs mb-space-xs"><span
+            class="material-symbols-outlined text-ink-terracotta text-[18px]">push_pin</span>
+          <p class="font-editorial-italic text-editorial-italic text-ink-espresso">Thanks for stopping by the desk.</p>
+        </div>
+        <p class="font-label-stamp text-label-stamp text-ink-muted uppercase tracking-wider">© 2026 Asif Shaik.</p>
+      </div>
+      <div class="flex items-center gap-space-lg"><a
+          class="font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-xs"
+          href="mailto:contact@asifshaik.dev"><span class="material-symbols-outlined text-[16px]">mail</span>email</a><a
+          class="font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-xs"
+          href="https://github.com/Asifsheik?tab=repositories" rel="noopener" target="_blank"><span
+            class="material-symbols-outlined text-[16px]">code</span>github</a><a
+          class="font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-xs"
+          href="https://linkedin.com" rel="noopener" target="_blank"><span
+            class="material-symbols-outlined text-[16px]">share</span>linkedin</a></div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
